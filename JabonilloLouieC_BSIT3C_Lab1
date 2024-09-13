@@ -1,0 +1,43 @@
+
+def create_paragraph():
+
+    ID_no = "A12345"
+    fullname = "Jabonillo, Louie C."
+    course = "BSIT"
+    year = "3"
+    section = "C"
+    age = "43"
+    birthday = "01/25/1981"
+    address = "#64 E. Viudez Poblacion, San Ildefonso, Bulacan"
+
+    paragraph = (f"I am {fullname}, with the course of {course}, currently in year {year}, section {section}. "
+                 f"I am {age} years old, born on {birthday}, and my ID is {ID_no}. "
+                 f"I reside at {address}.")
+    
+
+    paragraph_length = len(paragraph)
+
+
+    data_types = {
+        "ID No": type(ID_no).__name__,
+        "Fullname": type(fullname).__name__,
+        "Course": type(course).__name__,
+        "Year": type(year).__name__,
+        "Section": type(section).__name__,
+        "Age": type(age).__name__,
+        "Birthday": type(birthday).__name__,
+        "Address": type(address).__name__
+    }
+    
+    return paragraph, paragraph_length, data_types
+
+
+paragraph, paragraph_length, data_types = create_paragraph()
+
+
+print("Paragraph:")
+print(paragraph)
+print("\nParagraph Length (characters):", paragraph_length)
+print("\nInput Data Types:")
+for key, value in data_types.items():
+    print(f"{key}: {value}")
